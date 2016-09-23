@@ -1,42 +1,42 @@
-<h1>Listing error_reports</h1>
-
-<table>
+<%- model_class = ErrorReport -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => ErrorReport %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Staff actions</th>
-      <th>Time out</th>
-      <th>Time back</th>
-      <th>Equipment type</th>
-      <th>User</th>
-      <th>Out of service</th>
-      <th>Needs maintenance</th>
-      <th>Is closed</th>
-      <th>Equipment</th>
-      <th>Cctv off</th>
-      <th>Cctv on</th>
-      <th>Affected equipment</th>
-      <th>Type of problem</th>
-      <th>Owning agency</th>
-      <th>Outside support</th>
-      <th>Reporting agency</th>
-      <th>Ticket number</th>
-      <th>Operator actions</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:staff_actions) %></th>
+      <th><%= model_class.human_attribute_name(:time_out) %></th>
+      <th><%= model_class.human_attribute_name(:time_back) %></th>
+      <th><%= model_class.human_attribute_name(:equipment_type) %></th>
+      <th><%= model_class.human_attribute_name(:out_of_service) %></th>
+      <th><%= model_class.human_attribute_name(:needs_maintenance) %></th>
+      <th><%= model_class.human_attribute_name(:is_closed) %></th>
+      <th><%= model_class.human_attribute_name(:cctv_off) %></th>
+      <th><%= model_class.human_attribute_name(:cctv_on) %></th>
+      <th><%= model_class.human_attribute_name(:affected_equipment) %></th>
+      <th><%= model_class.human_attribute_name(:type_of_problem) %></th>
+      <th><%= model_class.human_attribute_name(:owning_agency) %></th>
+      <th><%= model_class.human_attribute_name(:outside_support) %></th>
+      <th><%= model_class.human_attribute_name(:reporting_agency) %></th>
+      <th><%= model_class.human_attribute_name(:ticket_number) %></th>
+      <th><%= model_class.human_attribute_name(:operator_actions) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @error_reports.each do |error_report| %>
       <tr>
+        <td><%= error_report.id %></td>
         <td><%= error_report.staff_actions %></td>
         <td><%= error_report.time_out %></td>
         <td><%= error_report.time_back %></td>
         <td><%= error_report.equipment_type %></td>
-        <td><%= error_report.user %></td>
         <td><%= error_report.out_of_service %></td>
         <td><%= error_report.needs_maintenance %></td>
         <td><%= error_report.is_closed %></td>
-        <td><%= error_report.equipment %></td>
         <td><%= error_report.cctv_off %></td>
         <td><%= error_report.cctv_on %></td>
         <td><%= error_report.affected_equipment %></td>
@@ -46,14 +46,21 @@
         <td><%= error_report.reporting_agency %></td>
         <td><%= error_report.ticket_number %></td>
         <td><%= error_report.operator_actions %></td>
-        <td><%= link_to 'Show', error_report %></td>
-        <td><%= link_to 'Edit', edit_error_report_path(error_report) %></td>
-        <td><%= link_to 'Destroy', error_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l error_report.created_at, format: :long %></td>
+        <td>
+          <%= link_to error_report_path(error_report), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to error_report_path(error_report), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Error report', new_error_report_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_error_report_path,
+            :class => 'btn btn-primary' %>

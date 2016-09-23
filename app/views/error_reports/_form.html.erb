@@ -1,89 +1,106 @@
-<%= form_for(@error_report) do |f| %>
-  <% if @error_report.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@error_report.errors.count, "error") %> prohibited this error_report from being saved:</h2>
-
-      <ul>
-      <% @error_report.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @error_report, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :staff_actions, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :staff_actions, :class => 'text-field form-control' %>
     </div>
-  <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.label :time_out, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :time_out, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :time_back, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :time_back, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :equipment_type, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :equipment_type, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :out_of_service, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :out_of_service, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :needs_maintenance, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :needs_maintenance, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :is_closed, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :is_closed, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cctv_off, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :cctv_off, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cctv_on, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :cctv_on, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :affected_equipment, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :affected_equipment, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :type_of_problem, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :type_of_problem, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :owning_agency, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :owning_agency, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :outside_support, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :outside_support, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :reporting_agency, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :reporting_agency, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ticket_number, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :ticket_number, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :operator_actions, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :operator_actions, :class => 'text-field form-control' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :staff_actions %><br>
-    <%= f.text_area :staff_actions %>
-  </div>
-  <div class="field">
-    <%= f.label :time_out %><br>
-    <%= f.datetime_select :time_out %>
-  </div>
-  <div class="field">
-    <%= f.label :time_back %><br>
-    <%= f.datetime_select :time_back %>
-  </div>
-  <div class="field">
-    <%= f.label :equipment_type %><br>
-    <%= f.text_field :equipment_type %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :out_of_service %><br>
-    <%= f.check_box :out_of_service %>
-  </div>
-  <div class="field">
-    <%= f.label :needs_maintenance %><br>
-    <%= f.check_box :needs_maintenance %>
-  </div>
-  <div class="field">
-    <%= f.label :is_closed %><br>
-    <%= f.check_box :is_closed %>
-  </div>
-  <div class="field">
-    <%= f.label :equipment_id %><br>
-    <%= f.text_field :equipment_id %>
-  </div>
-  <div class="field">
-    <%= f.label :cctv_off %><br>
-    <%= f.datetime_select :cctv_off %>
-  </div>
-  <div class="field">
-    <%= f.label :cctv_on %><br>
-    <%= f.datetime_select :cctv_on %>
-  </div>
-  <div class="field">
-    <%= f.label :affected_equipment %><br>
-    <%= f.text_field :affected_equipment %>
-  </div>
-  <div class="field">
-    <%= f.label :type_of_problem %><br>
-    <%= f.text_field :type_of_problem %>
-  </div>
-  <div class="field">
-    <%= f.label :owning_agency %><br>
-    <%= f.text_field :owning_agency %>
-  </div>
-  <div class="field">
-    <%= f.label :outside_support %><br>
-    <%= f.text_field :outside_support %>
-  </div>
-  <div class="field">
-    <%= f.label :reporting_agency %><br>
-    <%= f.text_field :reporting_agency %>
-  </div>
-  <div class="field">
-    <%= f.label :ticket_number %><br>
-    <%= f.number_field :ticket_number %>
-  </div>
-  <div class="field">
-    <%= f.label :operator_actions %><br>
-    <%= f.text_area :operator_actions %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  error_reports_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

@@ -1,94 +1,54 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = ErrorReport -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => ErrorReport %></h1>
+</div>
 
-<p>
-  <strong>Staff actions:</strong>
-  <%= @error_report.staff_actions %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:staff_actions) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.staff_actions %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:time_out) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.time_out %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:time_back) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.time_back %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:equipment_type) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.equipment_type %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:out_of_service) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.out_of_service %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:needs_maintenance) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.needs_maintenance %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:is_closed) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.is_closed %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:cctv_off) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.cctv_off %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:cctv_on) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.cctv_on %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:affected_equipment) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.affected_equipment %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:type_of_problem) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.type_of_problem %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:owning_agency) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.owning_agency %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:outside_support) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.outside_support %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:reporting_agency) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.reporting_agency %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ticket_number) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.ticket_number %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:operator_actions) %></dt>
+      <dd><pre class="prettyprint"><%= @error_report.operator_actions %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Time out:</strong>
-  <%= @error_report.time_out %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              error_reports_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_error_report_path(@error_report), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              error_report_path(@error_report),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Time back:</strong>
-  <%= @error_report.time_back %>
-</p>
-
-<p>
-  <strong>Equipment type:</strong>
-  <%= @error_report.equipment_type %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @error_report.user %>
-</p>
-
-<p>
-  <strong>Out of service:</strong>
-  <%= @error_report.out_of_service %>
-</p>
-
-<p>
-  <strong>Needs maintenance:</strong>
-  <%= @error_report.needs_maintenance %>
-</p>
-
-<p>
-  <strong>Is closed:</strong>
-  <%= @error_report.is_closed %>
-</p>
-
-<p>
-  <strong>Equipment:</strong>
-  <%= @error_report.equipment %>
-</p>
-
-<p>
-  <strong>Cctv off:</strong>
-  <%= @error_report.cctv_off %>
-</p>
-
-<p>
-  <strong>Cctv on:</strong>
-  <%= @error_report.cctv_on %>
-</p>
-
-<p>
-  <strong>Affected equipment:</strong>
-  <%= @error_report.affected_equipment %>
-</p>
-
-<p>
-  <strong>Type of problem:</strong>
-  <%= @error_report.type_of_problem %>
-</p>
-
-<p>
-  <strong>Owning agency:</strong>
-  <%= @error_report.owning_agency %>
-</p>
-
-<p>
-  <strong>Outside support:</strong>
-  <%= @error_report.outside_support %>
-</p>
-
-<p>
-  <strong>Reporting agency:</strong>
-  <%= @error_report.reporting_agency %>
-</p>
-
-<p>
-  <strong>Ticket number:</strong>
-  <%= @error_report.ticket_number %>
-</p>
-
-<p>
-  <strong>Operator actions:</strong>
-  <%= @error_report.operator_actions %>
-</p>
-
-<%= link_to 'Edit', edit_error_report_path(@error_report) %> |
-<%= link_to 'Back', error_reports_path %>
