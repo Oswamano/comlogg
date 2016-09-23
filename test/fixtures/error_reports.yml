@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  staff_actions: MyText
+  time_out: 2016-09-23 03:33:11
+  time_back: 2016-09-23 03:33:11
+  equipment_type: MyString
+  user_id: 
+  out_of_service: false
+  needs_maintenance: false
+  is_closed: false
+  equipment_id: 
+  cctv_off: 2016-09-23 03:33:11
+  cctv_on: 2016-09-23 03:33:11
+  affected_equipment: MyString
+  type_of_problem: MyString
+  owning_agency: MyString
+  outside_support: MyString
+  reporting_agency: MyString
+  ticket_number: 1
+  operator_actions: MyText
+
+two:
+  staff_actions: MyText
+  time_out: 2016-09-23 03:33:11
+  time_back: 2016-09-23 03:33:11
+  equipment_type: MyString
+  user_id: 
+  out_of_service: false
+  needs_maintenance: false
+  is_closed: false
+  equipment_id: 
+  cctv_off: 2016-09-23 03:33:11
+  cctv_on: 2016-09-23 03:33:11
+  affected_equipment: MyString
+  type_of_problem: MyString
+  owning_agency: MyString
+  outside_support: MyString
+  reporting_agency: MyString
+  ticket_number: 1
+  operator_actions: MyText
