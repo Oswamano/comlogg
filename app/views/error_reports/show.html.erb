@@ -1,0 +1,94 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Staff actions:</strong>
+  <%= @error_report.staff_actions %>
+</p>
+
+<p>
+  <strong>Time out:</strong>
+  <%= @error_report.time_out %>
+</p>
+
+<p>
+  <strong>Time back:</strong>
+  <%= @error_report.time_back %>
+</p>
+
+<p>
+  <strong>Equipment type:</strong>
+  <%= @error_report.equipment_type %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @error_report.user %>
+</p>
+
+<p>
+  <strong>Out of service:</strong>
+  <%= @error_report.out_of_service %>
+</p>
+
+<p>
+  <strong>Needs maintenance:</strong>
+  <%= @error_report.needs_maintenance %>
+</p>
+
+<p>
+  <strong>Is closed:</strong>
+  <%= @error_report.is_closed %>
+</p>
+
+<p>
+  <strong>Equipment:</strong>
+  <%= @error_report.equipment %>
+</p>
+
+<p>
+  <strong>Cctv off:</strong>
+  <%= @error_report.cctv_off %>
+</p>
+
+<p>
+  <strong>Cctv on:</strong>
+  <%= @error_report.cctv_on %>
+</p>
+
+<p>
+  <strong>Affected equipment:</strong>
+  <%= @error_report.affected_equipment %>
+</p>
+
+<p>
+  <strong>Type of problem:</strong>
+  <%= @error_report.type_of_problem %>
+</p>
+
+<p>
+  <strong>Owning agency:</strong>
+  <%= @error_report.owning_agency %>
+</p>
+
+<p>
+  <strong>Outside support:</strong>
+  <%= @error_report.outside_support %>
+</p>
+
+<p>
+  <strong>Reporting agency:</strong>
+  <%= @error_report.reporting_agency %>
+</p>
+
+<p>
+  <strong>Ticket number:</strong>
+  <%= @error_report.ticket_number %>
+</p>
+
+<p>
+  <strong>Operator actions:</strong>
+  <%= @error_report.operator_actions %>
+</p>
+
+<%= link_to 'Edit', edit_error_report_path(@error_report) %> |
+<%= link_to 'Back', error_reports_path %>

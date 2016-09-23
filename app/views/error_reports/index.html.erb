@@ -1,0 +1,59 @@
+<h1>Listing error_reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Staff actions</th>
+      <th>Time out</th>
+      <th>Time back</th>
+      <th>Equipment type</th>
+      <th>User</th>
+      <th>Out of service</th>
+      <th>Needs maintenance</th>
+      <th>Is closed</th>
+      <th>Equipment</th>
+      <th>Cctv off</th>
+      <th>Cctv on</th>
+      <th>Affected equipment</th>
+      <th>Type of problem</th>
+      <th>Owning agency</th>
+      <th>Outside support</th>
+      <th>Reporting agency</th>
+      <th>Ticket number</th>
+      <th>Operator actions</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @error_reports.each do |error_report| %>
+      <tr>
+        <td><%= error_report.staff_actions %></td>
+        <td><%= error_report.time_out %></td>
+        <td><%= error_report.time_back %></td>
+        <td><%= error_report.equipment_type %></td>
+        <td><%= error_report.user %></td>
+        <td><%= error_report.out_of_service %></td>
+        <td><%= error_report.needs_maintenance %></td>
+        <td><%= error_report.is_closed %></td>
+        <td><%= error_report.equipment %></td>
+        <td><%= error_report.cctv_off %></td>
+        <td><%= error_report.cctv_on %></td>
+        <td><%= error_report.affected_equipment %></td>
+        <td><%= error_report.type_of_problem %></td>
+        <td><%= error_report.owning_agency %></td>
+        <td><%= error_report.outside_support %></td>
+        <td><%= error_report.reporting_agency %></td>
+        <td><%= error_report.ticket_number %></td>
+        <td><%= error_report.operator_actions %></td>
+        <td><%= link_to 'Show', error_report %></td>
+        <td><%= link_to 'Edit', edit_error_report_path(error_report) %></td>
+        <td><%= link_to 'Destroy', error_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Error report', new_error_report_path %>
