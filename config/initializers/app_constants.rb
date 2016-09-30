@@ -1,0 +1,1 @@
+TYPE_OF_EQUIPMENT = ["CCTV", "DMS"]

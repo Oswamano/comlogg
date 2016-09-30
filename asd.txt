@@ -1,0 +1,48 @@
+<deviceorder>
+	<devicegroup orderIndex="0">
+		<device id="300" orderIndex="1"/>
+	</devicegroup>
+	<devicegroup orderIndex="1" name="I-290 (YOUNGMANN MEMORIAL HIGHWAY)">
+		<device id="303" orderIndex="0"/>
+		<device id="304" orderIndex="1"/>
+	</devicegroup>
+	<devicegroup orderIndex="2" name="ROUTE 33 (KENSINGTON EXPRESSWAY)">
+		<device id="306" orderIndex="1"/>
+		<device id="305" orderIndex="0"/>
+	</devicegroup>
+	<devicegroup orderIndex="3" name="ROUTE 198 (SCAJAQUADA EXPRESSWAY)">
+		<device id="361" orderIndex="0"/>
+	</devicegroup>
+	<devicegroup orderIndex="4" name="ROUTE 219 (SOUTHERN EXPRESSWAY)">
+		<device id="360" orderIndex="0"/>
+	</devicegroup>
+	<devicegroup orderIndex="5" name="I-90 (NEW YORK STATE THRUWAY)">
+		<device id="326" orderIndex="0"/>
+		<device id="317" orderIndex="1"/>
+		<device id="316" orderIndex="2"/>
+		<device id="324" orderIndex="3"/>
+		<device id="308" orderIndex="4"/>
+		<device id="320" orderIndex="5"/>
+		<device id="310" orderIndex="6"/>
+		<device id="319" orderIndex="7"/>
+		<device id="315" orderIndex="8"/>
+	</devicegroup>
+	<devicegroup orderIndex="6" name="I-190 (NIAGARA SECTION)">
+		<device id="307" orderIndex="0"/>
+		<device id="311" orderIndex="1"/>
+		<device id="325" orderIndex="2"/>
+		<device id="323" orderIndex="3"/>
+		<device id="312" orderIndex="4"/>
+		<device id="313" orderIndex="5"/>
+		<device id="318" orderIndex="6"/>
+		<device id="314" orderIndex="7"/>
+		<device id="716" orderIndex="8"/>
+		<device id="717" orderIndex="9"/>
+	</devicegroup>
+	<devicegroup orderIndex="7" name="I-990 (LOCKPORT EXPRESSWAY)">
+		<device id="301" orderIndex="1"/>
+	</devicegroup>
+	<devicegroup orderIndex="8" name="ROUTE 400 (AURORA EXPRESSWAY)">
+		<device id="321" orderIndex="0"/>
+	</devicegroup>
+</deviceorder>
