@@ -1,4 +1,5 @@
 class EquipmentController < ApplicationController
+  before_filter :require_user_signed_in
   before_action :set_equipment, only: [:show, :edit, :update, :destroy]
 
   # GET /equipment
