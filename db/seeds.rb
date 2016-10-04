@@ -14,3 +14,5 @@ puts "Seeding Admins"
 
     user2 = User.create(email: "aaron.preston827@gmail.com", password: "aaron123" , password_confirmation: "aaron123" )
     #user2.add_role :admin
+
+    user3 = User.create(email: "test@test.com", password: "matthew123", password_confirmation: "testing123")

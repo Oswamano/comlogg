@@ -48,12 +48,12 @@
         <td><%= error_report.operator_actions %></td>
         <td><%=l error_report.created_at, format: :long %></td>
         <td>
-          <%= link_to error_report_path(error_report), :class => 'btn btn-primary', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+          <%= link_to error_report_path(error_report), :class => 'btn btn-primary',:style => "width: 100px;", :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
             <%= 'Show' %>
             <%= glyph 'info-sign' %>
             <%= glyph 'pencil' %>
           <%- end -%>
-          <%= link_to error_report_path(error_report), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+          <%= link_to error_report_path(error_report), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger',:style => "width: 100px;", :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
             <%= 'Delete' %>
             <%= glyph 'remove' %>
           <%- end -%>

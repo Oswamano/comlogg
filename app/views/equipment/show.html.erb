@@ -13,8 +13,7 @@
 </div>
 
 <div class="form-group">
-  <%= link_to t('.back', :default => t("helpers.links.back")),
-              equipment_path, :class => 'btn btn-default'  %>
+  <%= link_to  "Index", equipment_index_path, :class => 'btn btn-default'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_equipment_path(@equipment), :class => 'btn btn-default' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
