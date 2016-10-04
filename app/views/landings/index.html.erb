@@ -1,6 +1,7 @@
 <h1>Welcome to the com log demo</h1>
-<p>This is a quick prototype I built out, equipment represents any type of equipment, and error reports can be generated for that equipment.</p>
-<%= link_to  "Equipment Index", equipment_index_path, :class => 'btn btn-primary'  %>
+<p> This is a quick prototype I built out, equipment represents any type of equipment, and error reports (equipment log entries) can be generated for that equipment.</p>
+<p> Try signing up an account and logging in so you can add new equipment, only signed in users can generate new equipment </p>
+<%= link_to  "Log Index", error_reports_path,:style => "width: 100px;", :class => 'btn btn-danger' %>
 <% if user_signed_in? %>
-<%= link_to  "Log Index", error_reports_path, :class => 'btn btn-danger' %>
+<%= link_to  "Equipment Index", equipment_index_path, :style => "width: 100px;", :class => 'btn btn-primary'  %>
 <% end %>
